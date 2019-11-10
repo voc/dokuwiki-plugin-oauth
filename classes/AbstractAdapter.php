@@ -102,6 +102,7 @@ abstract class AbstractAdapter {
 
             if(!$INPUT->get->has('code')) return false;
             $state = $INPUT->get->str('state', null);
+            $state = empty($state)?null:$state;
 
             try {
                 $this->oAuth->requestAccessToken($INPUT->get->str('code'), $state);
