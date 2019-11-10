@@ -14,6 +14,11 @@ use OAuth\Common\Http\Uri\UriInterface;
 class Generic extends AbstractService
 {
 
+    // Basic
+    const SCOPE_OPENID               = 'openid';
+    const SCOPE_PROFILE              = 'profile';
+    const SCOPE_EMAIL                = 'email';
+
     protected $authorizationEndpoint = null;
 
     protected $accessTokenEndpoint = null;
