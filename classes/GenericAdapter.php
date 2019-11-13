@@ -62,5 +62,18 @@ class GenericAdapter extends AbstractAdapter {
     public function getServiceName() {
         return 'Generic';
     }
+    /**
+     * Access to user and his email addresses
+     *
+     * @return array
+     */
+     public function getScope() {
+	$scopestr = $this->hlp->getConf('generic-scopes');
+        if ($scopestr !== '') {
+	    return explode(" ", $scopestr);
+	} else {
+	    return array ();
+	}
+     }
 
 }
